@@ -8,10 +8,17 @@ image::images/stackoverview.svg[Shows the role of various products in the {stack
 
 [float]
 [[introduction-kibana]]
-=== Visualize your data. Navigate the {stack}
+=== Visualize your data, manage the {stack}
 
 {kib} gives shape to your data and is the extensible user interface for 
 configuring and managing all aspects of the {stack}.
+
+It enables you to search, view, and interact with data stored in {es}. {kib} 
+makes it easy to understand large volumes of data by visualizing it in charts, 
+tables, maps, and dashboards. 
+
+For more information, see https://www.elastic.co/products/kibana and 
+{kibana-ref}/introduction.html[Introduction to {kib}]. 
 
 [float]
 [[introduction-elasticsearch]]
@@ -32,11 +39,17 @@ For more information, see https://www.elastic.co/products/elasticsearch and
 [[introduction-ingest]]
 === Ingest data from any source in any format
 
-{beats} is a platform for lightweight shippers that send data from edge machines 
-to {ls} and {es}.
+The {beats} are lightweight shippers that send data to {ls} or {es}. 
 
 {ls} is a dynamic data collection pipeline with an extensible plugin ecosystem 
-and strong {es} synergy. 
+and strong {es} synergy. It can dynamically unify data from disparate sources 
+and normalize the data into destinations of your choice. 
+
+For more information about {beats}, see https://www.elastic.co/products/beats 
+and {beats-ref}/beats-reference.html[{beats} overview]. 
+
+For more information about {ls}, see https://www.elastic.co/products/logstash 
+and {logstash-ref}/introduction.html[Introduction to {ls}]. 
 
 [float]
 [[introduction-cloud]]
@@ -45,8 +58,15 @@ and strong {es} synergy.
 From our Elasticsearch Service to out-of-the-box search solutions, Elastic Cloud 
 makes it easy to deploy, operate, and scale in the cloud.
 
-Centralize management of the {stack} and {xpack} with {ece}. Download and deploy 
-on the infrastructure you choose.
+Alternatively, you can download and deploy {ece} on the infrastructure of your 
+choice. It includes a console that you can use to manage and monitor the {stack} 
+at any scale.
+
+For more information about Elastic Cloud, see https://www.elastic.co/cloud and 
+https://www.elastic.co/guide/en/cloud/current/ec-getting-started.html[Getting started with Elastic Cloud].
+
+For more information about {ece}, see https://www.elastic.co/products/ece and 
+{ece-ref}/ece-overview.html[{ece} overview]. 
 
 [float]
 [[introduction-solutions]]
