@@ -4,19 +4,63 @@
 The {stack} enables you to reliably and securely take data from any source in 
 any format and search, analyze, and visualize it in real time. 
 
-image::images/stackoverview.svg[Shows layout of products in Elastic Stack]
-
-For a quick overview, see: https://www.elastic.co/products
-
+image::images/stackoverview.svg[Shows the role of various products in the {stack}]
 
 [float]
-=== Where to Go Next
+[[introduction-kibana]]
+=== Visualize your data. Navigate the {stack}
 
-* <<security-getting-started, Getting Started with Security>>
-* <<xpack-monitoring, Getting Started with Monitoring>>
-* <<watcher-getting-started, Getting Started with Alerting and Notification>>
-* {kibana-ref}/reporting-getting-started.html[Getting Started with Reporting]
-* {kibana-ref}/graph-getting-started.html[Getting Started with Graph]
+{kib} gives shape to your data and is the extensible user interface for 
+configuring and managing all aspects of the {stack}.
+
+[float]
+[[introduction-elasticsearch]]
+=== Search, analyze, and store your data
+
+{es} is a distributed, JSON-based search and analytics engine designed for 
+horizontal scalability, maximum reliability, and easy management. It enables you 
+to store, search, and analyze big volumes of data quickly and in near real time. 
+
+In the context of the {stack}, {es} stores the data that it receives from {ls} 
+and the {beats}. It also handles search requests and performs analysis for {kib} 
+and other clients. 
+
+For more information, see https://www.elastic.co/products/elasticsearch and 
+{ref}/getting-started.html[Getting started with {es}]. 
+
+[float]
+[[introduction-ingest]]
+=== Ingest data from any source in any format
+
+{beats} is a platform for lightweight shippers that send data from edge machines 
+to {ls} and {es}.
+
+{ls} is a dynamic data collection pipeline with an extensible plugin ecosystem 
+and strong {es} synergy. 
+
+[float]
+[[introduction-cloud]]
+=== Deploy the {stack} on-premise or in the cloud
+
+From our Elasticsearch Service to out-of-the-box search solutions, Elastic Cloud 
+makes it easy to deploy, operate, and scale in the cloud.
+
+Centralize management of the {stack} and {xpack} with {ece}. Download and deploy 
+on the infrastructure you choose.
+
+[float]
+[[introduction-solutions]]
+=== Choose a solution that meets your needs
+
+If you are seeking pre-defined configurations of the {stack} and samples to get 
+you up and running fast, there are solutions for 
+https://www.elastic.co/solutions/logging[logging], 
+https://www.elastic.co/solutions/app-search[app search], 
+https://www.elastic.co/solutions/site-search[site search], 
+https://www.elastic.co/solutions/security-analytics[security analytics], 
+https://www.elastic.co/solutions/metrics[metrics], 
+https://www.elastic.co/solutions/apm[application performance monitoring] (APM), 
+and more.
 
 [float]
 === Have Comments, Questions, or Feedback?
