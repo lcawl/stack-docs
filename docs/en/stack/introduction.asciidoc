@@ -4,6 +4,8 @@
 The {stack} enables you to reliably and securely take data from any source in 
 any format and search, analyze, and visualize it in real time. 
 
+image::images/stackoverview.svg[Shows layout of products in Elastic Stack]
+
 For a quick overview, see: https://www.elastic.co/products
 
 
