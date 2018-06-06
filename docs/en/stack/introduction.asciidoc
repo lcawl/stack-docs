@@ -2,61 +2,19 @@
 == Introduction
 
 The {stack} enables you to reliably and securely take data from any source in 
-any format and search, analyze, and visualize it in real time. 
+any format and search, analyze, and visualize it in near real time. 
 
 image::images/stackoverview.svg[Shows the role of various products in the {stack}]
-
-[float]
-[[introduction-kibana]]
-=== Visualize your data, manage the {stack}
-
-{kib} gives shape to your data and is the extensible user interface for 
-configuring and managing all aspects of the {stack}.
-
-It enables you to search, view, and interact with data stored in {es}. {kib} 
-makes it easy to understand large volumes of data by visualizing it in charts, 
-tables, maps, and dashboards. 
-
-For more information, see https://www.elastic.co/products/kibana and 
-{kibana-ref}/introduction.html[Introduction to {kib}]. 
-
-[float]
-[[introduction-elasticsearch]]
-=== Search, analyze, and store your data
-
-{es} is a distributed, JSON-based search and analytics engine designed for 
-horizontal scalability, maximum reliability, and easy management. It enables you 
-to store, search, and analyze big volumes of data quickly and in near real time. 
-
-In the context of the {stack}, {es} stores the data that it receives from {ls} 
-and the {beats}. It also handles search requests and performs analysis for {kib} 
-and other clients. 
-
-For more information, see https://www.elastic.co/products/elasticsearch and 
-{ref}/getting-started.html[Getting started with {es}]. 
-
-[float]
-[[introduction-ingest]]
-=== Ingest data from any source in any format
-
-The {beats} are lightweight shippers that send data to {ls} or {es}. 
-
-{ls} is a dynamic data collection pipeline with an extensible plugin ecosystem 
-and strong {es} synergy. It can dynamically unify data from disparate sources 
-and normalize the data into destinations of your choice. 
-
-For more information about {beats}, see https://www.elastic.co/products/beats 
-and {beats-ref}/beats-reference.html[{beats} overview]. 
-
-For more information about {ls}, see https://www.elastic.co/products/logstash 
-and {logstash-ref}/introduction.html[Introduction to {ls}]. 
 
 [float]
 [[introduction-cloud]]
 === Deploy the {stack} on-premise or in the cloud
 
-From our Elasticsearch Service to out-of-the-box search solutions, Elastic Cloud 
-makes it easy to deploy, operate, and scale in the cloud.
+//TO-DO: Clarify that you can deploy stack outside of cloud, but it's the 
+//easiest way to deploy, manage, and monitor the {stack} at scale.
+
+//TO-DO: Clarify: From our Elasticsearch Service to out-of-the-box search solutions, 
+Elastic Cloud makes it easy to deploy, operate, and scale in the cloud.
 
 Alternatively, you can download and deploy {ece} on the infrastructure of your 
 choice. It includes a console that you can use to manage and monitor the {stack} 
@@ -69,8 +27,56 @@ For more information about {ece}, see https://www.elastic.co/products/ece and
 {ece-ref}/ece-overview.html[{ece} overview]. 
 
 [float]
+[[introduction-ingest]]
+=== Ingest data from any source
+
+The {beats} are lightweight shippers that send data to {ls} or {es}. 
+
+{ls} is a dynamic data collection pipeline with an extensible plugin ecosystem 
+and strong {es} synergy. It can dynamically unify data from disparate sources 
+and normalize the data into destinations of your choice. 
+
+For more information about {beats}, see https://www.elastic.co/products/beats 
+and {beats-ref}/beats-reference.html[{beats} overview]. 
+
+//TBD: Mention that the format of the ingested data is JSON?
+//TBD: Mention ingest nodes?
+For more information about {ls}, see https://www.elastic.co/products/logstash 
+and {logstash-ref}/introduction.html[Introduction to {ls}]. 
+
+[float]
+[[introduction-elasticsearch]]
+=== Search, analyze, and store your data
+
+{es} is a distributed search and analytics engine designed for horizontal 
+scalability, maximum reliability, and easy management. It enables you to store, 
+search, and analyze large volumes of data quickly and in near real time. 
+
+//TO-DO: Mention it uses JSON?
+
+At the core of the {stack}, {es} stores the data it receives from {ls} and the 
+{beats}, makes it searchable, and facilitates analysis and data visualizations. 
+
+For more information, see https://www.elastic.co/products/elasticsearch and 
+{ref}/getting-started.html[Getting started with {es}]. 
+
+[float]
+[[introduction-kibana]]
+=== Visualize your data, manage the {stack}
+
+{kib} enables you to search, view, and interact with data stored in {es}. {kib} 
+makes it easy to understand large volumes of data by visualizing it in charts, 
+tables, and maps. 
+
+//TO-DO: Introduce notion of Kibana as the command center for monitoring and managing the stack
+//the extensible user interface for configuring and managing all aspects of the {stack}.
+
+For more information, see https://www.elastic.co/products/kibana and 
+{kibana-ref}/introduction.html[Introduction to {kib}]. 
+
+[float]
 [[introduction-solutions]]
-=== Choose a solution that meets your needs
+=== Solutions for common use cases
 
 If you are seeking pre-defined configurations of the {stack} and samples to get 
 you up and running fast, there are solutions for 
