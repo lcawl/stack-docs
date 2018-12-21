@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [[ml-gs-data]]
 === Identifying data for analysis
 

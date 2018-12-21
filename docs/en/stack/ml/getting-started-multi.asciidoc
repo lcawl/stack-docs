@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [[ml-gs-multi-jobs]]
 === Creating multi-metric jobs
 

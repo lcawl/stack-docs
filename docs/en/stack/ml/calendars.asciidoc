@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [[ml-calendars]]
 === Calendars and scheduled events
 
