@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-basic"]
 [[xpack-monitoring]]
 = Monitoring the {stack}
 

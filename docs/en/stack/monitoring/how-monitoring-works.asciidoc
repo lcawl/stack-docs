@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-basic"]
 [[how-monitoring-works]]
 == How monitoring works
 
