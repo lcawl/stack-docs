@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="{es-ml-analytics}"]
 [[xpack-ml]]
 = Machine learning in the {stack}
 
