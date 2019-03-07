@@ -1,4 +1,41 @@
 [[upgrading-elastic-stack-7.x]]
 === Upgrading from {prev-major-version} to {version}
 
-coming[8.0.0]
+. {ref}/setup-upgrade.html[Upgrade Elasticsearch] to the most recent
+{prev-major-version} on all nodes in your cluster. 
+
+. (Optional) If you do not use {es} {security-features}, explicitly disable it
+in the `elasticsearch.yml` file:
++
+[source,yaml]
+----------------------------------------------------------
+xpack.security.enabled: false
+----------------------------------------------------------
+
+. Upgrade {kib} to the most recent {prev-major-version}.
+
+. If you disabled the {es} {security-features}, also disable the {kib}
+{security-features} in the `kibana.yml` file:
++
+[source,yaml]
+----------------------------------------------------------
+xpack.security.enabled: false
+----------------------------------------------------------
+
+. Use the Upgrade Assistant in {kib} to view incompatibilities that you need to
+fix, identify any indices that need to be migrated or deleted, and upgrade the
+internal indices to the {major-version} index format.
++
+You can also call the Elasticsearch migration APIs directly:
++
+`/_migration/assistance`:: Runs a series of checks on your cluster,
+nodes, and indices and returns a list of issues that need to be
+fixed before you can upgrade to {version}. See
+{ref}/migration-api-assistance.html[Migration assistance API].
++
+`/_migration/upgrade`:: Upgrades the indices for the {watcher} and 
+{security-features} to a single-type format compatible with {es} {major-version}.
+See {ref}/migration-api-upgrade.html[Migration upgrade API]. 
+
+. Once you've resolved all of the migration issues, continue upgrading the
+rest of the products. Follow the order in <<upgrade-order-elastic-stack>>.
