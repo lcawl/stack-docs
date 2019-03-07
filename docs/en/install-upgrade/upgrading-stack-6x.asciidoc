@@ -1,4 +1,45 @@
 [[upgrading-elastic-stack-6.x]]
 === Upgrading from 6.x to {version}
 
-coming[8.0.0]
+. {ref}/setup-upgrade.html[Upgrade Elasticsearch] to the most recent 6.x.
+
+. (Optional) If you do not use {es} {security-features}, explicitly disable it
+in the `elasticsearch.yml` file:
++
+[source,yaml]
+----------------------------------------------------------
+xpack.security.enabled: false
+----------------------------------------------------------
+
+. Upgrade {kib} to the most recent 6.x.
+
+. If you disabled the {es} {security-features}, also disable the {kib}
+{security-features} in the `kibana.yml` file:
++
+[source,yaml]
+----------------------------------------------------------
+xpack.security.enabled: false
+----------------------------------------------------------
+
+. Use the Upgrade Assistant in Kibana to view incompatibilities that you need to
+fix, identify any indices that need to be migrated or deleted, and upgrade the
+internal indices to the 6.x index format. Alternatively, you can call the
+{ref}/migration-api-assistance.html[migration assistance API] and the
+{ref}/migration-api-upgrade.html[migration upgrade API] directly.
+
+. Once you've resolved all of the migration issues, perform a
+{ref}/rolling-upgrades.html[rolling upgrade] from {es} 6.x to the most recent
+7.x.
+
+. Upgrade {kib} to the most recent 7.x.
+
+. Use the Upgrade Assistant in Kibana to view incompatibilities that you need to
+fix, identify any indices that need to be migrated or deleted, and upgrade the
+internal indices to the appropriate index format.
+
+. Once you've resolved all of the migration issues, perform
+a {ref}/rolling-upgrades.html[rolling upgrade] from Elasticsearch 7.x to
+{version}.
+
+. Continue upgrading the rest of the products. Follow the order in
+<<upgrade-order-elastic-stack>>.
