@@ -1,13 +1,14 @@
 [[elastic-glossary]]
 = Elastic Glossary
-
+//:compat-mode!:
+//:data-uri:
 :cloud-terms:          true
 :elasticsearch-terms:  true
 :logstash-terms:       true
 :xpack-terms:          true
 
-include::{asciidoc-dir}/../../shared/versions.asciidoc[]
-include::{asciidoc-dir}/../../shared/attributes.asciidoc[]
+include::versions.asciidoc[]
+include::attributes.asciidoc[]
 
 include::intro.asciidoc[]
 include::glossary.asciidoc[]

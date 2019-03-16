@@ -1,5 +1,12 @@
 [[terms]]
 == Terminology
+:compat-mode!:
+:data-uri:
+
+image::xpack-tag.png[X-Pack]
+
+//image::https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[Linux,25,35,float="right"]
+
 
 ifdef::logstash-terms[]
 
