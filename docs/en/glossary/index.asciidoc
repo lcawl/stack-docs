@@ -1,7 +1,6 @@
 [[elastic-glossary]]
 = Elastic Glossary
-//:compat-mode!:
-//:data-uri:
+:compat-mode!:
 :cloud-terms:          true
 :elasticsearch-terms:  true
 :logstash-terms:       true
