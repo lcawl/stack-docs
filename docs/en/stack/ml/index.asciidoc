@@ -11,6 +11,8 @@ include::{asciidoc-dir}/../../shared/attributes.asciidoc[]
 
 include::setup.asciidoc[]
 
+include::workflow.asciidoc[]
+
 include::anomaly-detection/index.asciidoc[]
 
 include::df-analytics/index.asciidoc[]
