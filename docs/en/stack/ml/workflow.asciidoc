@@ -7,11 +7,9 @@ to understand the big picture. There are many types of analysis, which can help
 you solve many different types of problems. By taking the time to plan in
 advance, you get the best possible results.
 
-. Define the problem you want to solve.
+. <<workflow-define,Define the problem>>.
 
-. Construct your data set.
-
-. (Optional) Transform your data.
+. <<workflow-prepare,Prepare your data>>.
 
 . Train a model.
 
@@ -20,23 +18,30 @@ advance, you get the best possible results.
 . Use the model to make predictions.
 
 [discrete]
+[[workflow-define]]
 === Define the problem
 
-The first consideration, especially when you are first learning to use {ml},
-is the importance of the data and how familiar you are with it. Ideally, it is
-information that contains key performance indicators (KPIs) for the health,
-security, or success of your business or system. It is information that you need
-to monitor and act on when anomalous behavior occurs. You might even have {kib}
-dashboards that you're already using to watch this data. The better you know the
-data, the quicker you will be able to create {ml-jobs} that generate useful
-insights.
+Think about the problem you want to solve. Write down the questions you want
+to answer. For example, are you trying to predict whether a customer will renew
+a subscription or whether a specific package will be delivered on time? Do you
+want to find outliers or anomalous behavior in your data?
 
-The second consideration is what type of analysis you want to perform. The
-{ml-features} provide both <<xpack-ml,{anomaly-detect}>> and
-<<ml-dfanalytics,{dfanalytics}>>.
+Your problem statement affects which type of data you require and which types of
+{ml} analysis are applicable.  
 
 [discrete]
+[[workflow-prepare]]
 === Prepare your data
+
+Once you've identified the problem, consider which data is necessary to solve it.
+
+////
+Typically, the most useful {anomaly-detect} results come from data sets that
+contain key performance indicators (KPIs) for the health, security, or success
+of your business or system. You might even have {kib} dashboards that you're
+already using to watch this data. It is important to be familiar with your data
+so that you 
+
 
 IMPORTANT: If you want to create {anomaly-jobs} in {kib}, you must use {dfeeds}.
 That is to say, you must store your input data in {es}. When you create
@@ -45,4 +50,4 @@ for you under the covers.
 
 If your data is outside of {es}, {anomaly-detect} is still possible by using the
 {ref}/ml-post-data.html[post data to jobs API].
-
+////
