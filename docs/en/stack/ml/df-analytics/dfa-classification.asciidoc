@@ -4,10 +4,10 @@
 
 experimental[]
 
-{classification-cap} is a {ml} process for predicting the class or category of a 
-given data point in a dataset. Typical examples of {classification} problems are 
+{classification-cap} is a {ml} method for predicting the class or category of a 
+given data point in a data set. Typical examples of {classification} problems are 
 predicting loan risk, classifying music, or detecting cancer in a DNA sequence. 
-In the first case, for example, our dataset consists of data on loan applicants 
+In the first case, for example, our data set consists of data on loan applicants 
 that covers investment history, employment status, debit status, and so on. 
 Based on historical data, the {classification} analysis predicts whether it is 
 safe or risky to lend money to a given loan applicant. In the second case, the 
@@ -44,14 +44,14 @@ supported in the {feature-var} fields.
 [[dfa-classification-supervised]]
 ==== Training the {classification} model
 
-{classification-cap} – just like {regression} – is a supervised {ml} process. It 
-means that you need to supply a labeled training dataset that has some 
-{feature-vars} and a {depvar}. The {classification} algorithm learns the 
+{classification-cap} – just like {regression} – is a supervised {ml} method. It 
+means that you need to supply a labeled training data set that has some 
+{feature-vars} and a {depvar}. The {classification} algorithm identifies the 
 relationships between the features and the {depvar}. Once you’ve trained the 
-model on your training dataset, you can reuse the knowledge that the model has 
-learned about the relationships between the data points to classify new data. 
-Your training dataset should be approximately balanced which means the number of 
-data points belonging to the various classes should not be widely different, 
+model on your training data set, you can reuse the knowledge that the model has 
+learned to classify new data. 
+Your training data set should be approximately balanced which means the number
+of data points belonging to the various classes should not be widely different, 
 otherwise the {classanalysis} may not provide the best predictions. Read 
 <<dfa-classification-imbalanced-classes>> to learn more.
 
@@ -76,7 +76,7 @@ include::{docdir}/shared-ml-concepts.asciidoc[tag=feature-importance]
 [[dfa-classification-evaluation]]
 ==== Measuring model performance
 
-You can measure how well the model has performed on your dataset by using the 
+You can measure how well the model has performed on your data set by using the 
 `classification` evaluation type of the 
 {ref}/evaluate-dfanalytics.html[evaluate {dfanalytics} API]. The metric that the 
 evaluation provides you is the multi-class confusion matrix which tells you how 
@@ -86,8 +86,8 @@ belongs to the X class was mistakenly classified as Y.
 
 Another crucial measurement is how well your model performs on unseen data 
 points. To assess how well the trained model will perform on data it has never 
-seen before, you must set aside a proportion of the training dataset for 
-testing. This split of the dataset is the testing dataset. Once the model has 
+seen before, you must set aside a proportion of the training data set for 
+testing. This split of the data set is the testing data set. Once the model has 
 been trained, you can let the model predict the value of the data points it has 
 never seen before and compare the prediction to the actual value by using the 
 evaluate {dfanalytics} API.
