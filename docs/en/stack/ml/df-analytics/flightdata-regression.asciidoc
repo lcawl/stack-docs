@@ -312,14 +312,23 @@ The snippet below shows a part of a document with the annotated results:
 [source,console-result]
 ----  
           ...
-          "DestRegion" : "UK",
-          "OriginAirportID" : "LHR",
+          "DestRegion" : "GB-ENG",
           "DestCityName" : "London",
-          "FlightDelayMin" : 66,
+          "OriginCityName" : "Paris",
+          "FlightDelayMin" : 0,
           "ml" : {
-            "FlightDelayMin_prediction" : 62.527,
+            "FlightDelayMin_prediction" : 2.723973512649536,
+            "feature_importance" : [
+              {
+                "feature_name" : "DistanceMiles",
+                "importance" : 51.238662126577964
+              },
+              {
+                "feature_name" : "FlightTimeMin",
+                "importance" : -124.1633298851992
+              }
+            ],
             "is_training" : false
-          }
           ...
 ----
 ====
