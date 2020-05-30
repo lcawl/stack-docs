@@ -408,9 +408,9 @@ endif::[]
 
 include::{es-repo-dir}/rest-api/index.asciidoc[lines=6..12]
 
-include::{es-repo-dir}/ml/anomaly-detection/apis/ml-api.asciidoc[lines=1..7,leveloffset=+2]
+include::{es-repo-dir}/api-conventions.asciidoc[leveloffset=+2]
 
-include::{es-repo-dir}/ml/anomaly-detection/apis/post-calendar-event.asciidoc[leveloffset=+2]
+include::{es-repo-dir}/ml/anomaly-detection/apis/ml-api.asciidoc[leveloffset=+2]
 
 [[ess-apis]]
 === {ess} APIs
@@ -448,7 +448,8 @@ TBD
 [[elasticsearch-settings]]
 === Elasticsearch settings
 
-TBD
+include::{es-repo-dir}/settings/ml-settings.asciidoc[leveloffset=+1]
+
 
 [[elasticsearch-plugins]]
 === Elasticsearch plugins & integrations
@@ -480,7 +481,7 @@ TBD
 
 TBD
 
-[[security-roles]]
+[[built-in-roles]]
 === Security built-in roles
 
 TBD

@@ -100,7 +100,7 @@ include::{includedir}/../../../../docs/shared/cloud/ess-getting-started.asciidoc
 TBD
 
 [[admin-guides]]
-== Admin Guides
+== Admin guides
 
 TBD
 
@@ -217,7 +217,7 @@ endif::[]
 TBD
 
 [[analyst-guides]]
-== Analyst Guides
+== Analyst guides
 
 TBD
 
@@ -277,7 +277,7 @@ TBD
 TBD
 
 [[developer-guides]]
-== Developer Guides
+== Developer guides
 
 [[interact]]
 === Interact with Elasticsearch
@@ -315,7 +315,7 @@ TBD
 TBD
 
 [[contributor-guides]]
-== Contributor/Plugin Developer Guides
+== Contributor/Plugin developer guides
 
 [[core-dev]]
 === Core development
@@ -382,7 +382,7 @@ endif::[]
 
 TBD
 
-[[security]]
+[[security-concepts]]
 === Security
 
 include::{xes-repo-dir}/security/authentication/realms.asciidoc[lines=1..53,leveloffset=+1]
@@ -407,7 +407,11 @@ endif::[]
 [[elasticsearch-apis]]
 === {es} APIs
 
-TBD
+include::{es-repo-dir}/rest-api/index.asciidoc[lines=6..12]
+
+include::{es-repo-dir}/api-conventions.asciidoc[leveloffset=+2]
+
+include::{es-repo-dir}/ml/anomaly-detection/apis/ml-api.asciidoc[leveloffset=+2]
 
 [[ess-apis]]
 === {ess} APIs
@@ -415,7 +419,7 @@ TBD
 TBD
 
 [[kibana-apis]]
-=== Kibana APIs
+=== {kib} APIs
 
 include::{kib-repo-dir}/user/api.asciidoc[lines=6..12]
 include::{kib-repo-dir}/api/using-api.asciidoc[leveloffset=+2]
@@ -444,7 +448,7 @@ TBD
 [[elasticsearch-settings]]
 === Elasticsearch settings
 
-TBD
+include::{es-repo-dir}/settings/ml-settings.asciidoc[leveloffset=+1]
 
 [[elasticsearch-plugins]]
 === Elasticsearch plugins & integrations
@@ -476,7 +480,7 @@ TBD
 
 TBD
 
-[[security-roles]]
+[[built-in-roles]]
 === Security built-in roles
 
 TBD
