@@ -67,7 +67,7 @@ include::{beats-repo-dir}/release-notes/highlights/highlights.asciidoc[lines=4..
 [[elasticsearch-highlights]]
 === {es} release highlights
 
-include::{es-repo-dir}/reference/release-notes/highlights.asciidoc[lines=6..7]
+include::{es-repo-dir}/release-notes/highlights.asciidoc[lines=6..7]
 
 [[kibana-highlights]]
 === {kib} release highlights
@@ -203,7 +203,7 @@ endif::[]
 ifeval::["{buildtool}" == "gradle"]
 :imagesdir: elasticsearch/docs/reference/monitoring/
 endif::[]
-include::{es-repo-dir}/reference/monitoring/overview.asciidoc[lines=8..-1]
+include::{es-repo-dir}/monitoring/overview.asciidoc[lines=8..-1]
 ifeval::["{buildtool}" == "asciidoctor"]
 :!imagesdir:
 endif::[]
@@ -454,7 +454,7 @@ TBD
 [[ml-functions]]
 === Machine learning functions
 
-include::{es-repo-dir}/reference/ml/anomaly-detection/functions.asciidoc[lines=5..-1,leveloffset=+1]
+include::{es-repo-dir}/ml/anomaly-detection/functions.asciidoc[lines=5..-1,leveloffset=+1]
 
 [[ml-modules]]
 === Machine learning modules
@@ -486,15 +486,11 @@ include::{xes-repo-dir}/security/authorization/privileges.asciidoc[]
 
 //Omitting Glossary from gradle build due to build issues
 ifeval::["{buildtool}" == "asciidoctor"]
-:es-repo-dir:  {es-repo-dir}/reference
 include::{stack-repo-dir}/../glossary/glossary.asciidoc[leveloffset=+1]
-:!es-repo-dir:
 endif::[]
 
 ifeval::["{buildtool}" == "builddocs"]
-:es-repo-dir:  {es-repo-dir}/reference
 include::{stack-repo-dir}/../glossary/glossary.asciidoc[leveloffset=+1]
-:!es-repo-dir:
 endif::[]
 
 
