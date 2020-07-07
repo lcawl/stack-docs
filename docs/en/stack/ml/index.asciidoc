@@ -10,12 +10,21 @@
 include::{docs-root}/shared/versions/stack/{source_branch}.asciidoc[]
 include::{docs-root}/shared/attributes.asciidoc[]
 
+// Setup
 include::setup.asciidoc[]
 
-include::get-started/index.asciidoc[]
+// Getting started with machine learning
+include::get-started/ml-getting-started.asciidoc[]
+include::get-started/ml-gs-visualizer.asciidoc[leveloffset=+1]
+include::get-started/ml-gs-jobs.asciidoc[leveloffset=+1]
+include::get-started/ml-gs-results.asciidoc[leveloffset=+1]
+include::get-started/ml-gs-forecasts.asciidoc[leveloffset=+1]
+include::get-started/ml-gs-next.asciidoc[leveloffset=+1]
 
+// Anomaly detection
 include::anomaly-detection/index.asciidoc[]
 
+// Data frame analytics
 include::df-analytics/index.asciidoc[]
 
 include::redirects.asciidoc[]
