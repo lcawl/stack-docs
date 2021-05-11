@@ -23,6 +23,10 @@ must have:
 The latitude and longitude must be in the range -180 to 180 and represent a
 point on the surface of the Earth.
 
+If you want to view choropleth maps in **{data-viz}** or {anomaly-job} results,
+you must have fields that contain valid vector layers (such as {elastic-maps-service}/#file/world_countries[country codes] or 
+{elastic-maps-service}/#file/usa_zip_codes[postal codes]), as defined in the {kibana-ref}/maps-connect-to-ems.html[{ems} ({ems-init})].
+
 This example uses the sample eCommerce orders and sample web logs data sets. For
 more information, see
 {kibana-ref}/get-started.html#gs-get-data-into-kibana[Add the sample data].
@@ -39,6 +43,12 @@ preview them on a map. For example:
 
 [role="screenshot"]
 image::images/weblogs-data-visualizer-geopoint.jpg[A screenshot of a geo_point field in {data-viz}]
+
+If you have fields that contain valid vector layers, you can see a choropleth 
+map, in which each area is colored based on its document count. For example:
+
+[role="screenshot"]
+image::images/weblogs-data-visualizer-choropleth.jpg[A screenshot of a field that contains vector layer values in {data-viz}]
 
 [discrete]
 [geographic-anomalies-jobs]
