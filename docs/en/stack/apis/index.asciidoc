@@ -1,0 +1,8771 @@
+= Cases
+team@openapitools.org
+0.1
+:toc: left
+:numbered:
+:toclevels: 3
+:source-highlighter: highlightjs
+:keywords: openapi, rest, Cases
+:specDir: 
+:snippetDir: 
+:generator-template: v1 2019-12-20
+:info-url: https://openapi-generator.tech
+:app-name: Cases
+
+[abstract]
+.Abstract
+OpenAPI schema for Cases endpoints
+
+
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+
+
+== Access
+
+
+* *APIKey* KeyParamName:     _ApiKey_,     KeyInQuery: _false_, KeyInHeader: _true_
+* *HTTP Basic* Authentication _basicAuth_
+
+
+
+
+
+== Endpoints
+
+
+[.Cases]
+=== Cases
+
+
+[.addCaseComment]
+==== addCaseComment
+
+`POST /s/{spaceId}/api/cases/{caseId}/comments`
+
+Adds a comment or alert to a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| AddCaseCommentDefaultSpaceRequest
+|  <<AddCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.addCaseCommentDefaultSpace]
+==== addCaseCommentDefaultSpace
+
+`POST /api/cases/{caseId}/comments`
+
+Adds a comment or alert to a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| AddCaseCommentDefaultSpaceRequest
+|  <<AddCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.createCase]
+==== createCase
+
+`POST /s/{spaceId}/api/cases`
+
+Creates a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| CreateCaseDefaultSpaceRequest
+|  <<CreateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.createCaseDefaultSpace]
+==== createCaseDefaultSpace
+
+`POST /api/cases`
+
+Creates a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}api/cases/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| CreateCaseDefaultSpaceRequest
+|  <<CreateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCase]
+==== deleteCase
+
+`DELETE /s/{spaceId}/api/cases`
+
+Deletes one or more cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the  **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| ids
+| The cases that you want to removed. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseComment]
+==== deleteCaseComment
+
+`DELETE /s/{spaceId}/api/cases/{caseId}/comments/{commentId}`
+
+Deletes a comment or alert from a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/{commentId}/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseCommentDefaultSpace]
+==== deleteCaseCommentDefaultSpace
+
+`DELETE /api/cases/{caseId}/comments/{commentId}`
+
+Deletes a comment or alert from a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/{commentId}/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseComments]
+==== deleteCaseComments
+
+`DELETE /s/{spaceId}/api/cases/{caseId}/comments`
+
+Deletes all comments and alerts from a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseCommentsDefaultSpace]
+==== deleteCaseCommentsDefaultSpace
+
+`DELETE /api/cases/{caseId}/comments`
+
+Deletes all comments and alerts from a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseDefaultSpace]
+==== deleteCaseDefaultSpace
+
+`DELETE /api/cases`
+
+Deletes one or more cases from the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| ids
+| The cases that you want to removed. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getAllCaseComments]
+==== getAllCaseComments
+
+`GET /s/{spaceId}/api/cases/{caseId}/comments`
+
+Retrieves all the comments from a case.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getAllCaseCommentsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+* examples
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getAllCaseCommentsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getAllCaseCommentsDefaultSpace]
+==== getAllCaseCommentsDefaultSpace
+
+`GET /api/cases/{caseId}/comments`
+
+Retrieves all the comments from a case in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getAllCaseCommentsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+* examples
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getAllCaseCommentsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseComment]
+==== getCaseComment
+
+`GET /s/{spaceId}/api/cases/{caseId}/comments/{commentId}`
+
+Retrieves a comment from a case.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security*** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response_comments_inner>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response_comments_inner>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/{commentId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseCommentDefaultSpace]
+==== getCaseCommentDefaultSpace
+
+`GET /api/cases/{caseId}/comments/{commentId}`
+
+Retrieves a comment from a case in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response_comments_inner>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response_comments_inner>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/{commentId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConfiguration]
+==== getCaseConfiguration
+
+`GET /s/{spaceId}/api/cases/configure`
+
+Retrieves external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConfigurationDefaultSpace]
+==== getCaseConfigurationDefaultSpace
+
+`GET /api/cases/configure`
+
+Retrieves external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConnectors]
+==== getCaseConnectors
+
+`GET /s/{spaceId}/api/cases/configure/connectors/_find`
+
+Retrieves information about connectors.
+
+===== Description
+
+In particular, only the connectors that are supported for use in cases are returned. You must have `read` privileges for the **Actions and Connectors** feature in the **Management** section of the Kibana feature privileges. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getCaseConnectorsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConnectorsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/connectors/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConnectorsDefaultSpace]
+==== getCaseConnectorsDefaultSpace
+
+`GET /api/cases/configure/connectors/_find`
+
+Retrieves information about connectors for cases in the default space.
+
+===== Description
+
+In particular, only the connectors that are supported for use in cases are  returned. You must have `read` privileges for the **Actions and Connectors** feature in the **Management** section of the Kibana feature privileges. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/connectors/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+
+
+===== Return Type
+
+array[<<getCaseConnectorsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConnectorsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/connectors/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/connectors/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/connectors/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/connectors/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseReporters]
+==== getCaseReporters
+
+`GET /s/{spaceId}/api/cases/reporters`
+
+Returns information about the users who opened cases.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases. The API returns information about the users as they existed at the time of the case creation, including their name, full name, and email address. If any of those details change thereafter or if a user is deleted, the information returned by this API is unchanged. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/reporters/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseReportersDefaultCase_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseReportersDefaultCase_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/reporters/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/reporters/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/reporters/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/reporters/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseReportersDefaultCase]
+==== getCaseReportersDefaultCase
+
+`GET /api/cases/reporters`
+
+Returns information about the users who opened cases in the default space.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases. The API returns information about the users as they existed at the time of the case creation, including their name, full name, and email address. If any of those details change thereafter or if a user is deleted, the information returned by this API is unchanged. 
+
+
+// markup not found, no include::{specDir}api/cases/reporters/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseReportersDefaultCase_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseReportersDefaultCase_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/reporters/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/reporters/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/reporters/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/reporters/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseTags]
+==== getCaseTags
+
+`GET /s/{spaceId}/api/cases/tags`
+
+Aggregates and returns a list of case tags.
+
+===== Description
+
+You must have read privileges for the **Cases*** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/tags/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the retrieved case statistics to a specific set of applications. If this parameter is omitted, the response contains tags from all cases that the user has access to read. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+<<List>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<string>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/tags/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/tags/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/tags/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/tags/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseTagsDefaultSpace]
+==== getCaseTagsDefaultSpace
+
+`GET /api/cases/tags`
+
+Aggregates and returns a list of case tags in the default space.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/tags/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the retrieved case statistics to a specific set of applications. If this parameter is omitted, the response contains tags from all cases that the user has access to read. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+<<List>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<string>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/tags/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/tags/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/tags/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/tags/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCases]
+==== getCases
+
+`GET /s/{spaceId}/api/cases/_find`
+
+Retrieves a paginated subset of cases.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| defaultSearchOperator
+| The default operator to use for the simple_query_string. 
+| -
+| OR
+| 
+
+| fields
+| The fields in the entity to return in the response. <<String>>
+| -
+| null
+| 
+
+| from
+| [preview] Returns only cases that were created after a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+| page
+| The page number to return. 
+| -
+| 1
+| 
+
+| perPage
+| The number of rules to return per page. 
+| -
+| 20
+| 
+
+| reporters
+| Filters the returned cases by the user name of the reporter. 
+| -
+| null
+| 
+
+| search
+| An Elasticsearch simple_query_string query that filters the objects in the response. 
+| -
+| null
+| 
+
+| searchFields
+| The fields to perform the simple_query_string parsed query against. 
+| -
+| null
+| 
+
+| severity
+| The severity of the case. 
+| -
+| null
+| 
+
+| sortField
+| Determines which field is used to sort the results. 
+| -
+| createdAt
+| 
+
+| sortOrder
+| Determines the sort order. 
+| -
+| desc
+| 
+
+| status
+| Filters the returned cases by state. 
+| -
+| null
+| 
+
+| tags
+| Filters the returned cases by tags. 
+| -
+| null
+| 
+
+| to
+| [preview] Returns only cases that were created before a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+<<getCasesDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<getCasesDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesByAlert]
+==== getCasesByAlert
+
+`GET /s/{spaceId}/api/cases/alerts/{alertId}`
+
+Returns the cases associated with a specific alert.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| alertId
+| An identifier for the alert. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCasesByAlertDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCasesByAlertDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/alerts/{alertId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesByAlertDefaultSpace]
+==== getCasesByAlertDefaultSpace
+
+`GET /api/cases/alerts/{alertId}`
+
+Returns the cases associated with a specific alert in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/alerts/\{alertId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| alertId
+| An identifier for the alert. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCasesByAlertDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCasesByAlertDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/alerts/\{alertId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/alerts/\{alertId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/alerts/{alertId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/alerts/\{alertId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesDefaultSpace]
+==== getCasesDefaultSpace
+
+`GET /api/cases/_find`
+
+Retrieves a paginated subset of cases from the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| defaultSearchOperator
+| The default operator to use for the simple_query_string. 
+| -
+| OR
+| 
+
+| fields
+| The fields in the entity to return in the response. <<String>>
+| -
+| null
+| 
+
+| from
+| [preview] Returns only cases that were created after a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+| page
+| The page number to return. 
+| -
+| 1
+| 
+
+| perPage
+| The number of rules to return per page. 
+| -
+| 20
+| 
+
+| reporters
+| Filters the returned cases by the user name of the reporter. 
+| -
+| null
+| 
+
+| search
+| An Elasticsearch simple_query_string query that filters the objects in the response. 
+| -
+| null
+| 
+
+| searchFields
+| The fields to perform the simple_query_string parsed query against. 
+| -
+| null
+| 
+
+| severity
+| The severity of the case. 
+| -
+| null
+| 
+
+| sortField
+| Determines which field is used to sort the results. 
+| -
+| createdAt
+| 
+
+| sortOrder
+| Determines the sort order. 
+| -
+| desc
+| 
+
+| status
+| Filters the returned cases by state. 
+| -
+| null
+| 
+
+| tags
+| Filters the returned cases by tags. 
+| -
+| null
+| 
+
+| to
+| Returns only cases that were created before a specific date. The date must be specified as a KQL data range or date match expression. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+<<getCasesDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<getCasesDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.setCaseConfiguration]
+==== setCaseConfiguration
+
+`POST /s/{spaceId}/api/cases/configure`
+
+Sets external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. If you set a default connector, it is automatically selected when you create cases in Kibana. If you use the create case API, however, you must still specify all of the connector details. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| SetCaseConfigurationDefaultSpaceRequest
+|  <<SetCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.setCaseConfigurationDefaultSpace]
+==== setCaseConfigurationDefaultSpace
+
+`POST /api/cases/configure`
+
+Sets external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. If you set a default connector, it is automatically selected when you create cases in Kibana. If you use the create case API, however, you must still specify all of the connector details. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| SetCaseConfigurationDefaultSpaceRequest
+|  <<SetCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCase]
+==== updateCase
+
+`PATCH /s/{spaceId}/api/cases`
+
+Updates one or more cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the  **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the case you're updating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseDefaultSpaceRequest
+|  <<UpdateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseComment]
+==== updateCaseComment
+
+`PATCH /s/{spaceId}/api/cases/{caseId}/comments`
+
+Updates a comment or alert in a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. NOTE: You cannot change the comment type or the owner of a comment. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseCommentDefaultSpaceRequest
+|  <<UpdateCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseCommentDefaultSpace]
+==== updateCaseCommentDefaultSpace
+
+`PATCH /api/cases/{caseId}/comments`
+
+Updates a comment or alert in a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. NOTE: You cannot change the comment type or the owner of a comment. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseCommentDefaultSpaceRequest
+|  <<UpdateCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseConfiguration]
+==== updateCaseConfiguration
+
+`PATCH /s/{spaceId}/api/cases/configure/{configurationId}`
+
+Updates external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| configurationId
+| An identifier for the configuration. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseConfigurationDefaultSpaceRequest
+|  <<UpdateCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/{configurationId}/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseConfigurationDefaultSpace]
+==== updateCaseConfigurationDefaultSpace
+
+`PATCH /api/cases/configure/{configurationId}`
+
+Updates external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/\{configurationId\}/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| configurationId
+| An identifier for the configuration. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseConfigurationDefaultSpaceRequest
+|  <<UpdateCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/\{configurationId\}/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/\{configurationId\}/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/{configurationId}/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/\{configurationId\}/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseDefaultSpace]
+==== updateCaseDefaultSpace
+
+`PATCH /api/cases`
+
+Updates one or more cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. 
+
+
+// markup not found, no include::{specDir}api/cases/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseDefaultSpaceRequest
+|  <<UpdateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.Kibana]
+=== Kibana
+
+
+[.addCaseComment]
+==== addCaseComment
+
+`POST /s/{spaceId}/api/cases/{caseId}/comments`
+
+Adds a comment or alert to a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| AddCaseCommentDefaultSpaceRequest
+|  <<AddCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.addCaseCommentDefaultSpace]
+==== addCaseCommentDefaultSpace
+
+`POST /api/cases/{caseId}/comments`
+
+Adds a comment or alert to a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| AddCaseCommentDefaultSpaceRequest
+|  <<AddCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.createCase]
+==== createCase
+
+`POST /s/{spaceId}/api/cases`
+
+Creates a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| CreateCaseDefaultSpaceRequest
+|  <<CreateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.createCaseDefaultSpace]
+==== createCaseDefaultSpace
+
+`POST /api/cases`
+
+Creates a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're creating. 
+
+
+// markup not found, no include::{specDir}api/cases/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| CreateCaseDefaultSpaceRequest
+|  <<CreateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCase]
+==== deleteCase
+
+`DELETE /s/{spaceId}/api/cases`
+
+Deletes one or more cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the  **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| ids
+| The cases that you want to removed. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseComment]
+==== deleteCaseComment
+
+`DELETE /s/{spaceId}/api/cases/{caseId}/comments/{commentId}`
+
+Deletes a comment or alert from a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/{commentId}/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseCommentDefaultSpace]
+==== deleteCaseCommentDefaultSpace
+
+`DELETE /api/cases/{caseId}/comments/{commentId}`
+
+Deletes a comment or alert from a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/{commentId}/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseComments]
+==== deleteCaseComments
+
+`DELETE /s/{spaceId}/api/cases/{caseId}/comments`
+
+Deletes all comments and alerts from a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseCommentsDefaultSpace]
+==== deleteCaseCommentsDefaultSpace
+
+`DELETE /api/cases/{caseId}/comments`
+
+Deletes all comments and alerts from a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.deleteCaseDefaultSpace]
+==== deleteCaseDefaultSpace
+
+`DELETE /api/cases`
+
+Deletes one or more cases from the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're deleting. 
+
+
+// markup not found, no include::{specDir}api/cases/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| ids
+| The cases that you want to removed. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+
+-
+
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 204
+| Indicates a successful call.
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getAllCaseComments]
+==== getAllCaseComments
+
+`GET /s/{spaceId}/api/cases/{caseId}/comments`
+
+Retrieves all the comments from a case.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getAllCaseCommentsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+* examples
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getAllCaseCommentsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getAllCaseCommentsDefaultSpace]
+==== getAllCaseCommentsDefaultSpace
+
+`GET /api/cases/{caseId}/comments`
+
+Retrieves all the comments from a case in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getAllCaseCommentsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+* examples
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getAllCaseCommentsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseComment]
+==== getCaseComment
+
+`GET /s/{spaceId}/api/cases/{caseId}/comments/{commentId}`
+
+Retrieves a comment from a case.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security*** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response_comments_inner>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response_comments_inner>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/{commentId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/\{commentId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseCommentDefaultSpace]
+==== getCaseCommentDefaultSpace
+
+`GET /api/cases/{caseId}/comments/{commentId}`
+
+Retrieves a comment from a case in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases with the comments you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| commentId
+| The identifier for the comment. To retrieve comment IDs, use the get case or find cases APIs.  
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response_comments_inner>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response_comments_inner>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/{commentId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/\{commentId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConfiguration]
+==== getCaseConfiguration
+
+`GET /s/{spaceId}/api/cases/configure`
+
+Retrieves external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConfigurationDefaultSpace]
+==== getCaseConfigurationDefaultSpace
+
+`GET /api/cases/configure`
+
+Retrieves external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConnectors]
+==== getCaseConnectors
+
+`GET /s/{spaceId}/api/cases/configure/connectors/_find`
+
+Retrieves information about connectors.
+
+===== Description
+
+In particular, only the connectors that are supported for use in cases are returned. You must have `read` privileges for the **Actions and Connectors** feature in the **Management** section of the Kibana feature privileges. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+array[<<getCaseConnectorsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConnectorsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/connectors/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/connectors/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseConnectorsDefaultSpace]
+==== getCaseConnectorsDefaultSpace
+
+`GET /api/cases/configure/connectors/_find`
+
+Retrieves information about connectors for cases in the default space.
+
+===== Description
+
+In particular, only the connectors that are supported for use in cases are  returned. You must have `read` privileges for the **Actions and Connectors** feature in the **Management** section of the Kibana feature privileges. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/connectors/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+
+
+===== Return Type
+
+array[<<getCaseConnectorsDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConnectorsDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/connectors/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/connectors/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/connectors/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/connectors/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseReporters]
+==== getCaseReporters
+
+`GET /s/{spaceId}/api/cases/reporters`
+
+Returns information about the users who opened cases.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases. The API returns information about the users as they existed at the time of the case creation, including their name, full name, and email address. If any of those details change thereafter or if a user is deleted, the information returned by this API is unchanged. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/reporters/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseReportersDefaultCase_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseReportersDefaultCase_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/reporters/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/reporters/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/reporters/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/reporters/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseReportersDefaultCase]
+==== getCaseReportersDefaultCase
+
+`GET /api/cases/reporters`
+
+Returns information about the users who opened cases in the default space.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases. The API returns information about the users as they existed at the time of the case creation, including their name, full name, and email address. If any of those details change thereafter or if a user is deleted, the information returned by this API is unchanged. 
+
+
+// markup not found, no include::{specDir}api/cases/reporters/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCaseReportersDefaultCase_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseReportersDefaultCase_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/reporters/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/reporters/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/reporters/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/reporters/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseTags]
+==== getCaseTags
+
+`GET /s/{spaceId}/api/cases/tags`
+
+Aggregates and returns a list of case tags.
+
+===== Description
+
+You must have read privileges for the **Cases*** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/tags/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the retrieved case statistics to a specific set of applications. If this parameter is omitted, the response contains tags from all cases that the user has access to read. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+<<List>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<string>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/tags/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/tags/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/tags/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/tags/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCaseTagsDefaultSpace]
+==== getCaseTagsDefaultSpace
+
+`GET /api/cases/tags`
+
+Aggregates and returns a list of case tags in the default space.
+
+===== Description
+
+You must have read privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/tags/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the retrieved case statistics to a specific set of applications. If this parameter is omitted, the response contains tags from all cases that the user has access to read. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+<<List>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<string>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/tags/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/tags/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/tags/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/tags/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCases]
+==== getCases
+
+`GET /s/{spaceId}/api/cases/_find`
+
+Retrieves a paginated subset of cases.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| defaultSearchOperator
+| The default operator to use for the simple_query_string. 
+| -
+| OR
+| 
+
+| fields
+| The fields in the entity to return in the response. <<String>>
+| -
+| null
+| 
+
+| from
+| [preview] Returns only cases that were created after a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+| page
+| The page number to return. 
+| -
+| 1
+| 
+
+| perPage
+| The number of rules to return per page. 
+| -
+| 20
+| 
+
+| reporters
+| Filters the returned cases by the user name of the reporter. 
+| -
+| null
+| 
+
+| search
+| An Elasticsearch simple_query_string query that filters the objects in the response. 
+| -
+| null
+| 
+
+| searchFields
+| The fields to perform the simple_query_string parsed query against. 
+| -
+| null
+| 
+
+| severity
+| The severity of the case. 
+| -
+| null
+| 
+
+| sortField
+| Determines which field is used to sort the results. 
+| -
+| createdAt
+| 
+
+| sortOrder
+| Determines the sort order. 
+| -
+| desc
+| 
+
+| status
+| Filters the returned cases by state. 
+| -
+| null
+| 
+
+| tags
+| Filters the returned cases by tags. 
+| -
+| null
+| 
+
+| to
+| [preview] Returns only cases that were created before a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+<<getCasesDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<getCasesDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesByAlert]
+==== getCasesByAlert
+
+`GET /s/{spaceId}/api/cases/alerts/{alertId}`
+
+Returns the cases associated with a specific alert.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| alertId
+| An identifier for the alert. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCasesByAlertDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCasesByAlertDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/alerts/{alertId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/alerts/\{alertId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesByAlertDefaultSpace]
+==== getCasesByAlertDefaultSpace
+
+`GET /api/cases/alerts/{alertId}`
+
+Returns the cases associated with a specific alert in the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/alerts/\{alertId\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| alertId
+| An identifier for the alert. 
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+array[<<getCasesByAlertDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCasesByAlertDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/alerts/\{alertId\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/alerts/\{alertId\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/alerts/{alertId}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/alerts/\{alertId\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getCasesDefaultSpace]
+==== getCasesDefaultSpace
+
+`GET /api/cases/_find`
+
+Retrieves a paginated subset of cases from the default space.
+
+===== Description
+
+You must have `read` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the cases you're seeking. 
+
+
+// markup not found, no include::{specDir}api/cases/_find/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| defaultSearchOperator
+| The default operator to use for the simple_query_string. 
+| -
+| OR
+| 
+
+| fields
+| The fields in the entity to return in the response. <<String>>
+| -
+| null
+| 
+
+| from
+| [preview] Returns only cases that were created after a specific date. The date must be specified as a KQL data range or date match expression. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.  
+| -
+| null
+| 
+
+| owner
+| A filter to limit the response to a specific set of applications. If this parameter is omitted, the response contains information about all the cases that the user has access to read.  
+| -
+| null
+| 
+
+| page
+| The page number to return. 
+| -
+| 1
+| 
+
+| perPage
+| The number of rules to return per page. 
+| -
+| 20
+| 
+
+| reporters
+| Filters the returned cases by the user name of the reporter. 
+| -
+| null
+| 
+
+| search
+| An Elasticsearch simple_query_string query that filters the objects in the response. 
+| -
+| null
+| 
+
+| searchFields
+| The fields to perform the simple_query_string parsed query against. 
+| -
+| null
+| 
+
+| severity
+| The severity of the case. 
+| -
+| null
+| 
+
+| sortField
+| Determines which field is used to sort the results. 
+| -
+| createdAt
+| 
+
+| sortOrder
+| Determines the sort order. 
+| -
+| desc
+| 
+
+| status
+| Filters the returned cases by state. 
+| -
+| null
+| 
+
+| tags
+| Filters the returned cases by tags. 
+| -
+| null
+| 
+
+| to
+| Returns only cases that were created before a specific date. The date must be specified as a KQL data range or date match expression. 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+<<getCasesDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<getCasesDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/_find/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/_find/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/_find/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/_find/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.setCaseConfiguration]
+==== setCaseConfiguration
+
+`POST /s/{spaceId}/api/cases/configure`
+
+Sets external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. If you set a default connector, it is automatically selected when you create cases in Kibana. If you use the create case API, however, you must still specify all of the connector details. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| SetCaseConfigurationDefaultSpaceRequest
+|  <<SetCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.setCaseConfigurationDefaultSpace]
+==== setCaseConfigurationDefaultSpace
+
+`POST /api/cases/configure`
+
+Sets external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. If you set a default connector, it is automatically selected when you create cases in Kibana. If you use the create case API, however, you must still specify all of the connector details. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| SetCaseConfigurationDefaultSpaceRequest
+|  <<SetCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCase]
+==== updateCase
+
+`PATCH /s/{spaceId}/api/cases`
+
+Updates one or more cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the  **Management**, **Observability**, or **Security** section of the Kibana  feature privileges, depending on the owner of the case you're updating. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseDefaultSpaceRequest
+|  <<UpdateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseComment]
+==== updateCaseComment
+
+`PATCH /s/{spaceId}/api/cases/{caseId}/comments`
+
+Updates a comment or alert in a case.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. NOTE: You cannot change the comment type or the owner of a comment. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseCommentDefaultSpaceRequest
+|  <<UpdateCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/{caseId}/comments/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/\{caseId\}/comments/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseCommentDefaultSpace]
+==== updateCaseCommentDefaultSpace
+
+`PATCH /api/cases/{caseId}/comments`
+
+Updates a comment or alert in a case in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. NOTE: You cannot change the comment type or the owner of a comment. 
+
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| caseId
+| The identifier for the case. To retrieve case IDs, use the find cases API. All non-ASCII characters must be URL encoded. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseCommentDefaultSpaceRequest
+|  <<UpdateCaseCommentDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/\{caseId\}/comments/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/{caseId}/comments/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/\{caseId\}/comments/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseConfiguration]
+==== updateCaseConfiguration
+
+`PATCH /s/{spaceId}/api/cases/configure/{configurationId}`
+
+Updates external connection details, such as the closure type and default connector for cases.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. 
+
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| configurationId
+| An identifier for the configuration. 
+| X
+| null
+| 
+
+| spaceId
+| An identifier for the space. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseConfigurationDefaultSpaceRequest
+|  <<UpdateCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :s/{spaceId}/api/cases/configure/{configurationId}/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}s/\{spaceId\}/api/cases/configure/\{configurationId\}/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseConfigurationDefaultSpace]
+==== updateCaseConfigurationDefaultSpace
+
+`PATCH /api/cases/configure/{configurationId}`
+
+Updates external connection details, such as the closure type and default connector for cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case configuration. Connectors are used to interface with external systems. You must create a connector before you can use it in your cases. Refer to the add connectors API. 
+
+
+// markup not found, no include::{specDir}api/cases/configure/\{configurationId\}/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| configurationId
+| An identifier for the configuration. 
+| X
+| null
+| 
+
+|===
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseConfigurationDefaultSpaceRequest
+|  <<UpdateCaseConfigurationDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+array[<<getCaseConfigurationDefaultSpace_200_response_inner>>]
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+| List[<<getCaseConfigurationDefaultSpace_200_response_inner>>] 
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/\{configurationId\}/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/configure/\{configurationId\}/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/configure/{configurationId}/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/configure/\{configurationId\}/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.updateCaseDefaultSpace]
+==== updateCaseDefaultSpace
+
+`PATCH /api/cases`
+
+Updates one or more cases in the default space.
+
+===== Description
+
+You must have `all` privileges for the **Cases** feature in the **Management**, **Observability**, or **Security** section of the Kibana feature privileges, depending on the owner of the case you're updating. 
+
+
+// markup not found, no include::{specDir}api/cases/PATCH/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| UpdateCaseDefaultSpaceRequest
+|  <<UpdateCaseDefaultSpaceRequest>>
+| -
+| 
+| 
+
+|===
+
+
+====== Header Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| kbn-xsrf
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+===== Return Type
+
+<<createCaseDefaultSpace_200_response>>
+
+
+===== Content Type
+
+* application/json; charset=utf-8
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Indicates a successful call.
+|  <<createCaseDefaultSpace_200_response>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}api/cases/PATCH/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}api/cases/PATCH/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :api/cases/PATCH/PATCH.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}api/cases/PATCH/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[#models]
+== Models
+
+
+[#AddAlertCommentRequestProperties]
+=== _AddAlertCommentRequestProperties_ 
+
+
+
+[.fields-AddAlertCommentRequestProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| X
+| String 
+| The alert identifier. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| index
+| X
+| String 
+| The alert index. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| rule
+| X
+| add_alert_comment_request_properties_rule 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ alert, 
+
+|===
+
+
+[#AddAlertCommentRequestPropertiesRule]
+=== _AddAlertCommentRequestPropertiesRule_ 
+
+The rule that is associated with the alert. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.
+
+
+[.fields-AddAlertCommentRequestPropertiesRule]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| id
+| 
+| String 
+| The rule identifier.
+|  
+
+| name
+| 
+| String 
+| The rule name.
+|  
+
+|===
+
+
+[#AddCaseCommentDefaultSpaceRequest]
+=== _AddCaseCommentDefaultSpaceRequest_ 
+
+
+
+[.fields-AddCaseCommentDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| X
+| String 
+| The alert identifier. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| index
+| X
+| String 
+| The alert index. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| rule
+| X
+| add_alert_comment_request_properties_rule 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ user, 
+
+| comment
+| X
+| String 
+| The new comment. It is required only when &#x60;type&#x60; is &#x60;user&#x60;.
+|  
+
+|===
+
+
+[#AddUserCommentRequestProperties]
+=== _AddUserCommentRequestProperties_ 
+
+
+
+[.fields-AddUserCommentRequestProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| comment
+| X
+| String 
+| The new comment. It is required only when &#x60;type&#x60; is &#x60;user&#x60;.
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ user, 
+
+|===
+
+
+[#AlertCommentResponseProperties]
+=== _AlertCommentResponseProperties_ 
+
+
+
+[.fields-AlertCommentResponseProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| 
+| String 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| index
+| 
+| String 
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| pushed_at
+| 
+| Date 
+| 
+| date-time 
+
+| pushed_by
+| 
+| getCaseConfigurationDefaultSpace_200_response_inner_updated_by 
+| 
+|  
+
+| rule
+| 
+| alert_comment_response_properties_rule 
+| 
+|  
+
+| type
+| 
+| String 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#AlertCommentResponsePropertiesRule]
+=== _AlertCommentResponsePropertiesRule_ 
+
+
+
+[.fields-AlertCommentResponsePropertiesRule]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| id
+| 
+| String 
+| 
+|  
+
+| name
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#ClosureTypes]
+=== _ClosureTypes_ 
+
+Indicates whether a case is automatically closed when it is pushed to external systems (&#x60;close-by-pushing&#x60;) or not automatically closed (&#x60;close-by-user&#x60;).
+
+[.fields-ClosureTypes]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#ConnectorTypes]
+=== _ConnectorTypes_ 
+
+The type of connector.
+
+[.fields-ConnectorTypes]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#CreateCaseDefaultSpace200Response]
+=== _CreateCaseDefaultSpace200Response_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200Response]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| closed_at
+| 
+| Date 
+| 
+| date-time 
+
+| closed_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| comments
+| 
+| List  of <<createCaseDefaultSpace_200_response_comments_inner>>
+| 
+|  
+
+| connector
+| 
+| createCaseDefaultSpace_200_response_connector 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| description
+| 
+| String 
+| 
+|  
+
+| duration
+| 
+| Integer 
+| The elapsed time from the creation of the case to its closure (in seconds). If the case has not been closed, the duration is set to null. If the case was closed after less than half a second, the duration is rounded down to zero. 
+|  
+
+| external_service
+| 
+| createCaseDefaultSpace_200_response_external_service 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| settings
+| 
+| createCaseDefaultSpace_200_response_settings 
+| 
+|  
+
+| severity
+| 
+| severity_property 
+| 
+|  
+
+| status
+| 
+| status 
+| 
+|  
+
+| tags
+| 
+| List  of <<string>>
+| 
+|  
+
+| title
+| 
+| String 
+| 
+|  
+
+| totalAlerts
+| 
+| Integer 
+| 
+|  
+
+| totalComment
+| 
+| Integer 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseClosedBy]
+=== _CreateCaseDefaultSpace200ResponseClosedBy_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseClosedBy]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| email
+| 
+| String 
+| 
+|  
+
+| full_name
+| 
+| String 
+| 
+|  
+
+| username
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseCommentsInner]
+=== _CreateCaseDefaultSpace200ResponseCommentsInner_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseCommentsInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| 
+| String 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| index
+| 
+| String 
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| pushed_at
+| 
+| Date 
+| 
+| date-time 
+
+| pushed_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| rule
+| 
+| alert_comment_response_properties_rule 
+| 
+|  
+
+| type
+| 
+| String 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+| comment
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseConnector]
+=== _CreateCaseDefaultSpace200ResponseConnector_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseConnector]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| fields
+| 
+| createCaseDefaultSpace_request_connector_fields 
+| 
+|  
+
+| id
+| 
+| String 
+| The identifier for the connector. To create a case without a connector, use &#x60;none&#x60;.
+|  
+
+| name
+| 
+| String 
+| The name of the connector. To create a case without a connector, use &#x60;none&#x60;.
+|  
+
+| type
+| 
+| connector_types 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseCreatedBy]
+=== _CreateCaseDefaultSpace200ResponseCreatedBy_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseCreatedBy]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| email
+| 
+| String 
+| 
+|  
+
+| full_name
+| 
+| String 
+| 
+|  
+
+| username
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseExternalService]
+=== _CreateCaseDefaultSpace200ResponseExternalService_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseExternalService]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| connector_id
+| 
+| String 
+| 
+|  
+
+| connector_name
+| 
+| String 
+| 
+|  
+
+| external_id
+| 
+| String 
+| 
+|  
+
+| external_title
+| 
+| String 
+| 
+|  
+
+| external_url
+| 
+| String 
+| 
+|  
+
+| pushed_at
+| 
+| Date 
+| 
+| date-time 
+
+| pushed_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpace200ResponseSettings]
+=== _CreateCaseDefaultSpace200ResponseSettings_ 
+
+
+
+[.fields-CreateCaseDefaultSpace200ResponseSettings]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| syncAlerts
+| 
+| Boolean 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpaceRequest]
+=== _CreateCaseDefaultSpaceRequest_ 
+
+
+
+[.fields-CreateCaseDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| connector
+| X
+| createCaseDefaultSpace_request_connector 
+| 
+|  
+
+| description
+| X
+| String 
+| The description for the case.
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| settings
+| X
+| createCaseDefaultSpace_request_settings 
+| 
+|  
+
+| severity
+| 
+| severity_property 
+| 
+|  
+
+| tags
+| X
+| List  of <<string>>
+| The words and phrases that help categorize cases. It can be an empty array.
+|  
+
+| title
+| X
+| String 
+| A title for the case.
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpaceRequestConnector]
+=== _CreateCaseDefaultSpaceRequestConnector_ 
+
+An object that contains the connector configuration.
+
+[.fields-CreateCaseDefaultSpaceRequestConnector]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| fields
+| X
+| createCaseDefaultSpace_request_connector_fields 
+| 
+|  
+
+| id
+| X
+| String 
+| The identifier for the connector. To create a case without a connector, use &#x60;none&#x60;.
+|  
+
+| name
+| X
+| String 
+| The name of the connector. To create a case without a connector, use &#x60;none&#x60;.
+|  
+
+| type
+| X
+| connector_types 
+| 
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpaceRequestConnectorFields]
+=== _CreateCaseDefaultSpaceRequestConnectorFields_ 
+
+An object containing the connector fields. To create a case without a connector, specify null. If you want to omit any individual field, specify null as its value.
+
+[.fields-CreateCaseDefaultSpaceRequestConnectorFields]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| caseId
+| 
+| String 
+| The case identifier for Swimlane connectors.
+|  
+
+| category
+| 
+| String 
+| The category of the incident for ServiceNow ITSM and ServiceNow SecOps connectors.
+|  
+
+| destIp
+| 
+| String 
+| A comma-separated list of destination IPs for ServiceNow SecOps connectors.
+|  
+
+| impact
+| 
+| String 
+| The effect an incident had on business for ServiceNow ITSM connectors.
+|  
+
+| issueType
+| 
+| String 
+| The type of issue for Jira connectors.
+|  
+
+| issueTypes
+| 
+| List  of <<number>>
+| The type of incident for IBM Resilient connectors.
+|  
+
+| malwareHash
+| 
+| String 
+| A comma-separated list of malware hashes for ServiceNow SecOps connectors.
+|  
+
+| malwareUrl
+| 
+| String 
+| A comma-separated list of malware URLs for ServiceNow SecOps connectors.
+|  
+
+| parent
+| 
+| String 
+| The key of the parent issue, when the issue type is sub-task for Jira connectors.
+|  
+
+| priority
+| 
+| String 
+| The priority of the issue for Jira and ServiceNow SecOps connectors.
+|  
+
+| severity
+| 
+| String 
+| The severity of the incident for ServiceNow ITSM connectors.
+|  
+
+| severityCode
+| 
+| BigDecimal 
+| The severity code of the incident for IBM Resilient connectors.
+|  
+
+| sourceIp
+| 
+| String 
+| A comma-separated list of source IPs for ServiceNow SecOps connectors.
+|  
+
+| subcategory
+| 
+| String 
+| The subcategory of the incident for ServiceNow ITSM connectors.
+|  
+
+| urgency
+| 
+| String 
+| The extent to which the incident resolution can be delayed for ServiceNow ITSM connectors.
+|  
+
+|===
+
+
+[#CreateCaseDefaultSpaceRequestSettings]
+=== _CreateCaseDefaultSpaceRequestSettings_ 
+
+An object that contains the case settings.
+
+[.fields-CreateCaseDefaultSpaceRequestSettings]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| syncAlerts
+| 
+| Boolean 
+| Turns alert syncing on or off.
+|  
+
+|===
+
+
+[#GetAllCaseCommentsDefaultSpace200ResponseInner]
+=== _GetAllCaseCommentsDefaultSpace200ResponseInner_ 
+
+
+
+[.fields-GetAllCaseCommentsDefaultSpace200ResponseInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| 
+| String 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| index
+| 
+| String 
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| pushed_at
+| 
+| Date 
+| 
+| date-time 
+
+| pushed_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| rule
+| 
+| alert_comment_response_properties_rule 
+| 
+|  
+
+| type
+| 
+| String 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+| comment
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCaseConfigurationDefaultSpace200ResponseInner]
+=== _GetCaseConfigurationDefaultSpace200ResponseInner_ 
+
+
+
+[.fields-GetCaseConfigurationDefaultSpace200ResponseInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| closure_type
+| 
+| closure_types 
+| 
+|  
+
+| connector
+| 
+| createCaseDefaultSpace_200_response_connector 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| error
+| 
+| String 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| mappings
+| 
+| List  of <<getCaseConfigurationDefaultSpace_200_response_inner_mappings_inner>>
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| getCaseConfigurationDefaultSpace_200_response_inner_updated_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCaseConfigurationDefaultSpace200ResponseInnerMappingsInner]
+=== _GetCaseConfigurationDefaultSpace200ResponseInnerMappingsInner_ 
+
+
+
+[.fields-GetCaseConfigurationDefaultSpace200ResponseInnerMappingsInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| action_type
+| 
+| String 
+| 
+|  
+
+| source
+| 
+| String 
+| 
+|  
+
+| target
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCaseConfigurationDefaultSpace200ResponseInnerUpdatedBy]
+=== _GetCaseConfigurationDefaultSpace200ResponseInnerUpdatedBy_ 
+
+
+
+[.fields-GetCaseConfigurationDefaultSpace200ResponseInnerUpdatedBy]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| email
+| 
+| String 
+| 
+|  
+
+| full_name
+| 
+| String 
+| 
+|  
+
+| username
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCaseConnectorsDefaultSpace200ResponseInner]
+=== _GetCaseConnectorsDefaultSpace200ResponseInner_ 
+
+
+
+[.fields-GetCaseConnectorsDefaultSpace200ResponseInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| actionTypeId
+| 
+| connector_types 
+| 
+|  
+
+| config
+| 
+| getCaseConnectorsDefaultSpace_200_response_inner_config 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| isDeprecated
+| 
+| Boolean 
+| 
+|  
+
+| isMissingSecrets
+| 
+| Boolean 
+| 
+|  
+
+| isPreconfigured
+| 
+| Boolean 
+| 
+|  
+
+| name
+| 
+| String 
+| 
+|  
+
+| referencedByCount
+| 
+| Integer 
+| 
+|  
+
+|===
+
+
+[#GetCaseConnectorsDefaultSpace200ResponseInnerConfig]
+=== _GetCaseConnectorsDefaultSpace200ResponseInnerConfig_ 
+
+
+
+[.fields-GetCaseConnectorsDefaultSpace200ResponseInnerConfig]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| apiUrl
+| 
+| String 
+| 
+|  
+
+| projectKey
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCaseReportersDefaultCase200ResponseInner]
+=== _GetCaseReportersDefaultCase200ResponseInner_ 
+
+
+
+[.fields-GetCaseReportersDefaultCase200ResponseInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| email
+| 
+| String 
+| 
+|  
+
+| full_name
+| 
+| String 
+| 
+|  
+
+| username
+| 
+| String 
+| 
+|  
+
+|===
+
+
+[#GetCasesByAlertDefaultSpace200ResponseInner]
+=== _GetCasesByAlertDefaultSpace200ResponseInner_ 
+
+
+
+[.fields-GetCasesByAlertDefaultSpace200ResponseInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| id
+| 
+| String 
+| The case identifier.
+|  
+
+| title
+| 
+| String 
+| The case title.
+|  
+
+|===
+
+
+[#GetCasesDefaultSpace200Response]
+=== _GetCasesDefaultSpace200Response_ 
+
+
+
+[.fields-GetCasesDefaultSpace200Response]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| cases
+| 
+| List  of <<createCaseDefaultSpace_200_response>>
+| 
+|  
+
+| count_closed_cases
+| 
+| Integer 
+| 
+|  
+
+| count_in_progress_cases
+| 
+| Integer 
+| 
+|  
+
+| count_open_cases
+| 
+| Integer 
+| 
+|  
+
+| page
+| 
+| Integer 
+| 
+|  
+
+| per_page
+| 
+| Integer 
+| 
+|  
+
+| total
+| 
+| Integer 
+| 
+|  
+
+|===
+
+
+[#GetCasesDefaultSpaceOwnerParameter]
+=== _GetCasesDefaultSpaceOwnerParameter_ 
+
+
+
+[.fields-GetCasesDefaultSpaceOwnerParameter]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#GetCasesDefaultSpaceReportersParameter]
+=== _GetCasesDefaultSpaceReportersParameter_ 
+
+
+
+[.fields-GetCasesDefaultSpaceReportersParameter]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#Owners]
+=== _Owners_ 
+
+The application that owns the cases: Stack Management, Observability, or Elastic Security.
+
+
+[.fields-Owners]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#SetCaseConfigurationDefaultSpaceRequest]
+=== _SetCaseConfigurationDefaultSpaceRequest_ 
+
+
+
+[.fields-SetCaseConfigurationDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| closure_type
+| X
+| closure_types 
+| 
+|  
+
+| connector
+| X
+| createCaseDefaultSpace_request_connector 
+| 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| settings
+| 
+| setCaseConfigurationDefaultSpace_request_settings 
+| 
+|  
+
+|===
+
+
+[#SetCaseConfigurationDefaultSpaceRequestSettings]
+=== _SetCaseConfigurationDefaultSpaceRequestSettings_ 
+
+An object that contains the case settings.
+
+[.fields-SetCaseConfigurationDefaultSpaceRequestSettings]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| syncAlerts
+| X
+| Boolean 
+| Turns alert syncing on or off.
+|  
+
+|===
+
+
+[#SeverityProperty]
+=== _SeverityProperty_ 
+
+The severity of the case.
+
+[.fields-SeverityProperty]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#Status]
+=== _Status_ 
+
+The status of the case.
+
+[.fields-Status]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+|===
+
+
+[#UpdateAlertCommentRequestProperties]
+=== _UpdateAlertCommentRequestProperties_ 
+
+
+
+[.fields-UpdateAlertCommentRequestProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| X
+| String 
+| The alert identifier. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| id
+| X
+| String 
+| The identifier for the comment. To retrieve comment IDs, use the get comments API. 
+|  
+
+| index
+| X
+| String 
+| The alert index. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| rule
+| X
+| add_alert_comment_request_properties_rule 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ alert, 
+
+| version
+| X
+| String 
+| The current comment version. To retrieve version values, use the get comments API. 
+|  
+
+|===
+
+
+[#UpdateCaseCommentDefaultSpaceRequest]
+=== _UpdateCaseCommentDefaultSpaceRequest_ 
+
+
+
+[.fields-UpdateCaseCommentDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| alertId
+| X
+| String 
+| The alert identifier. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| id
+| X
+| String 
+| The identifier for the comment. To retrieve comment IDs, use the get comments API. 
+|  
+
+| index
+| X
+| String 
+| The alert index. It is required only when &#x60;type&#x60; is &#x60;alert&#x60;. This functionality is in technical preview and may be changed or removed in a future release. Elastic will apply best effort to fix any issues, but features in technical preview are not subject to the support SLA of official GA features. 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| rule
+| X
+| add_alert_comment_request_properties_rule 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ user, 
+
+| version
+| X
+| String 
+| The current comment version. To retrieve version values, use the get comments API. 
+|  
+
+| comment
+| X
+| String 
+| The new comment. It is required only when &#x60;type&#x60; is &#x60;user&#x60;.
+|  
+
+|===
+
+
+[#UpdateCaseConfigurationDefaultSpaceRequest]
+=== _UpdateCaseConfigurationDefaultSpaceRequest_ 
+
+
+
+[.fields-UpdateCaseConfigurationDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| closure_type
+| 
+| closure_types 
+| 
+|  
+
+| connector
+| 
+| createCaseDefaultSpace_request_connector 
+| 
+|  
+
+| version
+| X
+| String 
+| The version of the connector. To retrieve the version value, use the get configuration API. 
+|  
+
+|===
+
+
+[#UpdateCaseDefaultSpaceRequest]
+=== _UpdateCaseDefaultSpaceRequest_ 
+
+
+
+[.fields-UpdateCaseDefaultSpaceRequest]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| cases
+| 
+| List  of <<updateCaseDefaultSpace_request_cases_inner>>
+| 
+|  
+
+|===
+
+
+[#UpdateCaseDefaultSpaceRequestCasesInner]
+=== _UpdateCaseDefaultSpaceRequestCasesInner_ 
+
+
+
+[.fields-UpdateCaseDefaultSpaceRequestCasesInner]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| connector
+| 
+| createCaseDefaultSpace_request_connector 
+| 
+|  
+
+| description
+| 
+| String 
+| The description for the case.
+|  
+
+| id
+| X
+| String 
+| The identifier for the case.
+|  
+
+| settings
+| 
+| createCaseDefaultSpace_request_settings 
+| 
+|  
+
+| severity
+| 
+| severity_property 
+| 
+|  
+
+| status
+| 
+| status 
+| 
+|  
+
+| tags
+| 
+| List  of <<string>>
+| The words and phrases that help categorize cases.
+|  
+
+| title
+| 
+| String 
+| A title for the case.
+|  
+
+| version
+| X
+| String 
+| The current version of the case.
+|  
+
+|===
+
+
+[#UpdateUserCommentRequestProperties]
+=== _UpdateUserCommentRequestProperties_ 
+
+
+
+[.fields-UpdateUserCommentRequestProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| comment
+| X
+| String 
+| The new comment. It is required only when &#x60;type&#x60; is &#x60;user&#x60;.
+|  
+
+| id
+| X
+| String 
+| The identifier for the comment. To retrieve comment IDs, use the get comments API. 
+|  
+
+| owner
+| X
+| owners 
+| 
+|  
+
+| type
+| X
+| String 
+| The type of comment.
+|  _Enum:_ user, 
+
+| version
+| X
+| String 
+| The current comment version. To retrieve version values, use the get comments API. 
+|  
+
+|===
+
+
+[#UserCommentResponseProperties]
+=== _UserCommentResponseProperties_ 
+
+
+
+[.fields-UserCommentResponseProperties]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| comment
+| 
+| String 
+| 
+|  
+
+| created_at
+| 
+| Date 
+| 
+| date-time 
+
+| created_by
+| 
+| createCaseDefaultSpace_200_response_created_by 
+| 
+|  
+
+| id
+| 
+| String 
+| 
+|  
+
+| owner
+| 
+| owners 
+| 
+|  
+
+| pushed_at
+| 
+| Date 
+| 
+| date-time 
+
+| pushed_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| type
+| 
+| String 
+| 
+|  
+
+| updated_at
+| 
+| Date 
+| 
+| date-time 
+
+| updated_by
+| 
+| createCaseDefaultSpace_200_response_closed_by 
+| 
+|  
+
+| version
+| 
+| String 
+| 
+|  
+
+|===
+
+
